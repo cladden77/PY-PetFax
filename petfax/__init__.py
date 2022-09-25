@@ -7,9 +7,13 @@ def create_app():
     def hello():
         return 'Hello, PetFax!'
 
-    # Register pet Blueprint
-    from . import pet
+    # register pet blueprint 
+    from . import pet 
     app.register_blueprint(pet.bp)
+
+    # register fact blueprint 
+    from . import fact
+    app.register_blueprint(fact.bp)
 
     # Return the app
     return app
